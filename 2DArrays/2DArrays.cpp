@@ -1,5 +1,12 @@
 #include <iostream>
+
+
+// Универсальный макрос для статических массивов:
+#define ARRAY_ROWS(a)  (sizeof(a) / sizeof(a[0]))
+#define ARRAY_COLS(a)  (sizeof(a[0]) / sizeof(a[0][0]))
+
 using namespace std;
+
 
 int main() {
     int arr[5] = { 1, 2, 3, 4, 5 };
@@ -25,5 +32,8 @@ int main() {
     pM++;                   // теперь p указывает на вторую строку (сдвиг на 5*sizeof(int) байт)
     printf("%d\n", pM[0][1]); // → 7
 
+
+    printf("ROW = %d\n", (int)ARRAY_ROWS(matrix));
+    printf("COL = %d\n", (int)ARRAY_COLS(matrix));
 
 }
