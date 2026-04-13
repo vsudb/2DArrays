@@ -11,6 +11,8 @@
 //https://pythontutor.com/visualize.html#mode=display
 //https://circuitlabs.net/labs/c-stack-heap-memory-visualizer-learning-tool/
 
+//https://www.comarch.com/sw-and-hw-services/blog/part-2-memory-optimization-in-embedded-systems-in-the-c-language-ram/
+
 void f3(int x) {
     int z = x + 3;
     printf("f3: z = %d\n", z);
