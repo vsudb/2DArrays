@@ -4,8 +4,11 @@
 //void f() { f(); }
 //
 //int main() { f(); }
+//https://www.codevisualizer.app/playground
+//https://cs-visualizer.com/?utm_source=chatgpt.com#
+//https://algocraft.vikshalabs.in/complexity-cheatsheet
 
-
+//https://pythontutor.com/visualize.html#mode=display
 
 void f3(int x) {
     int z = x + 3;
