@@ -22,16 +22,15 @@ void printArray(int** arr, int ROW, int COL) {
 }
 
 int** createArray(int ROW, int COL) {
-     
    
 }
 
-/* Удаление jagged-массива */
+
 void deleteArray(int** arr, int ROW) {
     for (int i = 0; i < ROW; i++) {
-        free(*(arr + i));   /* освобождаем каждую строку */
+        free(*(arr + i));
     }
-    free(arr);              /* освобождаем массив указателей */
+    free(arr);
 }
 
 /* Быстрая перестановка соседних строк (swap указателей, данные не копируются) */
