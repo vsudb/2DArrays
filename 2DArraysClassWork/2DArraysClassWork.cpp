@@ -22,7 +22,8 @@ void printArray(int** arr, int ROW, int COL) {
 }
 
 int** createArray(int ROW, int COL) {
-   
+    int** arr = new int*[ROW];
+    return arr;
 }
 
 
@@ -41,16 +42,13 @@ void transformArray(int** arr, int ROW) {
 }
 
 /* Дублирование каждой строки: строка i → строки 2i и 2i+1 (shallow copy) */
-int** changeArray(int** in, int ROW) {
-   
+int** changeArray(int** in, int ROW, int OUT_ROW) {
+    int** out = new int* [OUT_ROW];
+    return out;
 }
 
 
-int** createLinearArray(int ROW, int COL) {
-    
-}
-
-void deleteLinearArray(int** ptrs) {
+void deleteLineArray(int** ptrs) {
     free(*ptrs);   
     free(ptrs);    
 }
@@ -61,8 +59,9 @@ int main(void) {
     int** arr = createArray(ROW, COL);
     printArray(arr, ROW, COL);
 
-    int** out = changeArray(arr, ROW);
-    printArray(out, ROW * 2, COL);
+    int OUT_ROW = ROW * 2;
+    int** out = changeArray(arr, ROW, OUT_ROW);
+    printArray(out, OUT_ROW, COL);
               
     deleteArray(arr, ROW);
     free(out);
