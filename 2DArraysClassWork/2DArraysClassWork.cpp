@@ -22,7 +22,7 @@ void printArray(int** arr, int ROW, int COL) {
 }
 
 int** createArray(int ROW, int COL) {
-    int** arr = new int*[ROW];
+    int** arr = new int* [ROW];
     return arr;
 }
 
@@ -49,8 +49,8 @@ int** changeArray(int** in, int ROW, int OUT_ROW) {
 
 
 void deleteLineArray(int** ptrs) {
-    free(*ptrs);   
-    free(ptrs);    
+    free(*ptrs);
+    free(ptrs);
 }
 
 int main(void) {
@@ -62,7 +62,7 @@ int main(void) {
     int OUT_ROW = ROW * 2;
     int** out = changeArray(arr, ROW, OUT_ROW);
     printArray(out, OUT_ROW, COL);
-              
+
     deleteArray(arr, ROW);
     free(out);
 
